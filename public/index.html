@@ -3,6 +3,7 @@
         <title>Underwasser</title>
         
         <!-- Libs -->
+        <script src="lib/jquery-1.12.4.min.js"></script>
         <link rel="stylesheet" href="\lib\material.min.css">
         <link rel="stylesheet" href="\lib\angular-material.min.css">
         <script src="\lib\angular.min.js"></script>
@@ -16,8 +17,25 @@
     
     </head>
     <body>
-        <div ng-controller="indexController">
-            {{test}}
+        <div ng-controller="index">
+            
+            <!-- Product Card -->
+            <md-card>
+                <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Favorite">
+                        <md-icon>favorite</md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Settings">
+                        <md-icon>menu</md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share">
+                        <md-icon>share-arrow</md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+            <!------------------->
+            
         </div>
     </body>
 </html>
