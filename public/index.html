@@ -1,41 +1,64 @@
-<html ng-app="mainApp">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="mainApp">
     <head>
         <title>Underwasser</title>
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <!-- Libs -->
         <script src="lib/jquery-1.12.4.min.js"></script>
-        <link rel="stylesheet" href="\lib\material.min.css">
-        <link rel="stylesheet" href="\lib\angular-material.min.css">
-        <script src="\lib\angular.min.js"></script>
-        <script src="\lib\material.min.js"></script>
-        <script src="\lib\angular-material.min.js"></script>
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-aria.min.js"></script>
+        <script src="lib/angular-animate.min.js"></script>
+        <script src="lib/angular-material.min.js"></script>
+        <link rel="stylesheet" href="font/material/icons.css" type="text/css"/>
+        <link rel="stylesheet" href="font/roboto/light/font.css" type="text/css" />
+        <link rel="stylesheet" href="lib/material.min.css" type="text/css"/>
+        <link rel="stylesheet" href="lib/angular-material.min.css"  type="text/css"/>
         
         <!-- Css -->
-        
+        <link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
         <!-- JavaScripts -->
         <script src="\javascripts\index-controller.js"></script>
     
     </head>
-    <body>
-        <div ng-controller="index">
-            
-            <!-- Product Card -->
-            <md-card>
-                <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-                <md-card-actions layout="row" layout-align="end center">
-                    <md-button class="md-icon-button" aria-label="Favorite">
-                        <md-icon>favorite</md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="Settings">
-                        <md-icon>menu</md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="Share">
-                        <md-icon>share-arrow</md-icon>
-                    </md-button>
-                </md-card-actions>
-            </md-card>
-            <!------------------->
-            
+    <body ng-controller="index" class="mdl-color--blue-500">
+         
+        <div class="mdl-color--blue-500 mdl-color-text--grey-50 header">
+           <h1 class="titles">Underwasser</h1>
+           <div ng-cloak>
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom >
+                    <md-tab label="one" class="mdl-color--blue-500 mdl-color-text--grey-50 header">
+                            <md-content class="md-padding" layout="row">
+                                <md-card flex="33" class="image">
+                                    
+                                    <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+                                    <h2>{{product.name}}</h2>
+                                    
+                                    <md-card-actions layout="row">
+                                        <md-button class="md-raised mdl-color--blue-500 mdl-color-text--grey-50" >{{product.price}}</md-button>
+                                        <div flex="20"></div>
+                                        <md-button class="md-icon-button" aria-label="Favorite" >
+                                            <i class="material-icons">reorder</i>
+                                        </md-button>
+                                        <md-button class="md-icon-button" aria-label="Settings"  >
+                                            <i class="material-icons">add_shopping_cart</i>
+                                        </md-button>
+                                        <md-button class="md-icon-button" aria-label="Share" >
+                                            <i class="material-icons">favorite</i>
+                                        </md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </md-content>
+                    </md-tab>
+                    <md-tab label="two">
+                        <md-content class="md-padding">
+                            <h1 class="md-display-2">Tab Two</h1>
+                            <p>This is tab number two</p>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-content>
         </div>
+        </div>
+        
     </body>
 </html>
