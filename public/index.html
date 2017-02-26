@@ -8,6 +8,7 @@
         <script src="lib/angular-aria.min.js"></script>
         <script src="lib/angular-animate.min.js"></script>
         <script src="lib/angular-material.min.js"></script>
+        <script src="lib/angular-route.min.js"></script>
         <link rel="stylesheet" href="font/material/icons.css" type="text/css"/>
         <link rel="stylesheet" href="font/roboto/light/font.css" type="text/css" />
         <link rel="stylesheet" href="lib/material.min.css" type="text/css"/>
@@ -19,46 +20,22 @@
         <script src="\javascripts\index-controller.js"></script>
     
     </head>
-    <body ng-controller="index" class="mdl-color--blue-500">
+    <body ng-controller="index" class="mdl-color--red-900">
          
-        <div class="mdl-color--blue-500 mdl-color-text--grey-50 header">
+        <div class="mdl-color--red-900 mdl-color-text--grey-50 header">
            <h1 class="titles">Underwasser</h1>
            <div ng-cloak>
             <md-content>
-                <md-tabs md-dynamic-height md-border-bottom >
-                    <md-tab label="one" class="mdl-color--blue-500 mdl-color-text--grey-50 header">
-                            <md-content class="md-padding" layout="row">
-                                <md-card flex="33" class="image">
-                                    
-                                    <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-                                    <h2>{{product.name}}</h2>
-                                    
-                                    <md-card-actions layout="row">
-                                        <md-button class="md-raised mdl-color--blue-500 mdl-color-text--grey-50" >{{product.price}}</md-button>
-                                        <div flex="20"></div>
-                                        <md-button class="md-icon-button" aria-label="Favorite" >
-                                            <i class="material-icons">reorder</i>
-                                        </md-button>
-                                        <md-button class="md-icon-button" aria-label="Settings"  >
-                                            <i class="material-icons">add_shopping_cart</i>
-                                        </md-button>
-                                        <md-button class="md-icon-button" aria-label="Share" >
-                                            <i class="material-icons">favorite</i>
-                                        </md-button>
-                                    </md-card-actions>
-                                </md-card>
-                            </md-content>
-                    </md-tab>
-                    <md-tab label="two">
-                        <md-content class="md-padding">
-                            <h1 class="md-display-2">Tab Two</h1>
-                            <p>This is tab number two</p>
-                        </md-content>
-                    </md-tab>
+                <md-tabs md-dynamic-height md-border-bottom md-selected="selectedIndex">
+                    <md-tab label="catalog" class="mdl-color--red-900 mdl-color-text--grey-50 header" href="#/"></md-tab>
+                    <md-tab label="ABOUT US" href="#/about"><span href="#/about"> </md-tab>
                 </md-tabs>
+                <md-content class="md-padding" layout="row">
+                    <ng-view></ng-view>
+                </md-content>
             </md-content>
         </div>
-        </div>
+        
         
     </body>
 </html>

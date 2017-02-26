@@ -1,0 +1,19 @@
+<md-card flex="33" class="image">
+                                    
+    <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+    <h2>{{product.name}}</h2>
+                                    
+    <md-card-actions layout="row">
+        <md-button class="md-raised mdl-color--red-900 mdl-color-text--grey-50" >{{product.price}}</md-button>
+        <div flex="20"></div>
+         <md-button class="md-icon-button" aria-label="Favorite" >
+         <i class="material-icons">reorder</i>
+         </md-button>
+         <md-button class="md-icon-button" aria-label="Settings"  >
+            <i class="material-icons">add_shopping_cart</i>
+         </md-button>
+         <md-button class="md-icon-button" aria-label="Share" >
+             <i class="material-icons">favorite</i>
+         </md-button>
+     </md-card-actions>
+</md-card>
